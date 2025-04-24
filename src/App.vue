@@ -1,13 +1,12 @@
 <template>
   <v-app>
+    <Header />
     <v-main>
-      <HelloWorld />
+      <router-view />
     </v-main>
-
-    <AppFooter />
   </v-app>
 </template>
 
 <script setup>
-  //
+import Header from "@/components/header/index.vue";
 </script>
