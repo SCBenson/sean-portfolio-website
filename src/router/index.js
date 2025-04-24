@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router/auto";
 
-import Home from "@/components/HelloWorld.vue";
-import About from "@/components/about/index.vue";
-import CurriculumVitae from "@/components/CV/index.vue";
-import Projects from "@/components/my-projects/index.vue";
-import Contact from "@/components/contact/index.vue";
+import Home from "@/components/Home.vue";
+import About from "@/components/sections/about/About.vue";
+import CurriculumVitae from "@/components/sections/CV/CV.vue";
+import Projects from "@/components/sections/my-projects/Projects.vue";
+import Contact from "@/components/sections/contact/Contact.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
