@@ -5,7 +5,6 @@
  */
 
 // Plugins
-import { registerPlugins } from "@/plugins";
 import router from "@/router/index.js";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
@@ -25,7 +24,7 @@ const app = createApp(App);
 const customTheme = {
   dark: false,
   colors: {
-    primary: "#1a1a2e", // Indigo - change this to your preferred color
+    primary: "#1a1a2e", // Your custom primary color
     secondary: "#b4e1ef", // Blue grey
     header: "#2c3e50",
     accent: "#9C27B0", // Purple
@@ -47,8 +46,9 @@ const vuetify = createVuetify({
   },
 });
 
-registerPlugins(app);
+// REMOVED: registerPlugins(app); - This was causing duplicate Vuetify registration
+// Only register the plugins you actually need, or create them manually
 
 app.use(router);
-app.use(vuetify);
+app.use(vuetify); // Only one Vuetify instance
 app.mount("#app");

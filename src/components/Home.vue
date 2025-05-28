@@ -7,6 +7,7 @@ import About from '@/components/sections/about/About.vue';
 
 </script>
 <style scoped>
+
 /* .carousel-container {
   width: 80%;
   max-width: 800px;

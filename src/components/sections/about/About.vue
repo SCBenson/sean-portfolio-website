@@ -1,8 +1,17 @@
 <template>
   <div class="full-page-wrapper">
+    
     <Header/>
 
     <v-container color="primary" fluid class="pa-0 ma-0 about-container">
+      <div class="nav-container">
+        <v-list>
+          <v-list-item>
+            <v-btn id="small-apple-btn" class="small-apple-btn ">Contact</v-btn>
+            <v-btn id="small-apple-btn" class="small-apple-btn">Business Languages</v-btn>
+          </v-list-item>
+        </v-list>
+      </div>
       <div id="photo-container" ref="photoContainer" class="avatar-position">
         <v-avatar id="photo" size="300">
           <v-img src="/images/portfolio-pic.webp" alt="Sean Benson"></v-img>
@@ -14,6 +23,7 @@
       </p>
 
       <v-btn 
+          id="contact-btn"
           variant="outlined"
           color="white"
           size="large"
@@ -43,12 +53,14 @@ import Header from '@/components/layout/header/Header.vue';
   background-color: rgb(var(--v-theme-primary));
 }
 
+
 .about-container {
   height: calc(100vh - 56px);
   width: 100vw;
   position: relative;
   overflow: hidden;
   flex: 1;
+  position: relative;
 }
 
 
@@ -95,9 +107,6 @@ import Header from '@/components/layout/header/Header.vue';
 }
 
 .contact-button{
-  position: absolute;
-  top: 450px;
-  right: 650px;
   background-color: transparent !important;
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
   border-radius: 12px !important;
@@ -111,6 +120,12 @@ import Header from '@/components/layout/header/Header.vue';
   height: 60px;
 }
 
+#contact-btn{
+  position: absolute;
+  top: 450px;
+  right: 650px;
+}
+
 .contact-button:hover {
   background-color: #007AFF !important; /* Apple blue */
   border-color: #007AFF !important;
@@ -121,6 +136,52 @@ import Header from '@/components/layout/header/Header.vue';
 
 .contact-button:active {
   transform: translateY(0) !important;
+}
+
+.small-apple-btn {
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 6px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 10px !important;
+  text-transform: none !important;
+  letter-spacing: 0.3px !important;
+  padding: 4px 12px !important;
+  min-height: 22px !important;
+  min-width: auto !important;
+  height: auto !important;
+  line-height: 1.2 !important;
+  transition: all 0.3s ease !important;
+}
+
+.small-apple-btn:hover {
+  background-color: #007AFF !important;
+  border-color: #007AFF !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3) !important;
+}
+
+.small-apple-btn:active {
+  transform: translateY(0) !important;
+}
+
+#small-apple-btn{
+  font-size: 10px;
+}
+
+.nav-container{
+  position: absolute;
+  left: 0%;
+  bottom: 20%;
+  height: 500px;
+  width: 150px;
+  display: flex;
+}
+
+.nav-container .v-list { /* Added proper selector */
+  background-color: rgb(var(--v-theme-primary)) !important;
 }
 
 
