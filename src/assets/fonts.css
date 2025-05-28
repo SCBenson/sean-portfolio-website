@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "GrotesquePro";
+  src: url("./fonts/BasisGrotesqueArabicPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GrotesquePro";
+  src: url("./fonts/BasisGrotesqueArabicPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GrotesquePro";
+  src: url("./fonts/BasisGrotesqueArabicProPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GrotesquePro";
+  src: url("./fonts/BasisGrotesqueArabicPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GrotesquePro";
+  src: url("./fonts/BasisGrotesqueArabicPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("./fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Global application font override */
+.v-application {
+  font-family: "GrotesquePro", "PlayfairDisplay" "Roboto", Arial, sans-serif !important;
+}
+
+/* Override all Vuetify typography classes */
+.v-application .text-h1,
+.v-application .text-h2,
+.v-application .text-h3,
+.v-application .text-h4,
+.v-application .text-h5,
+.v-application .text-h6,
+.v-application .text-subtitle-1,
+.v-application .text-subtitle-2,
+.v-application .text-body-1,
+.v-application .text-body-2,
+.v-application .text-button,
+.v-application .text-caption,
+.v-application .text-overline {
+  font-family: "GrotesquePro", "Roboto", Arial, sans-serif !important;
+}

@@ -7,6 +7,11 @@
 // Plugins
 import { registerPlugins } from "@/plugins";
 import router from "@/router/index.js";
+import { createVuetify } from "vuetify";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+import "vuetify/styles";
+import "@/assets/fonts.css";
 
 // Components
 import App from "./App.vue";
@@ -16,7 +21,34 @@ import { createApp } from "vue";
 
 const app = createApp(App);
 
+// Define your custom theme
+const customTheme = {
+  dark: false,
+  colors: {
+    primary: "#1a1a2e", // Indigo - change this to your preferred color
+    secondary: "#b4e1ef", // Blue grey
+    header: "#2c3e50",
+    accent: "#9C27B0", // Purple
+    error: "#F44336", // Red
+    info: "#2196F3", // Blue
+    success: "#4CAF50", // Green
+    warning: "#FFC107", // Amber
+  },
+};
+
+const vuetify = createVuetify({
+  components,
+  directives,
+  theme: {
+    defaultTheme: "customTheme",
+    themes: {
+      customTheme,
+    },
+  },
+});
+
 registerPlugins(app);
 
 app.use(router);
+app.use(vuetify);
 app.mount("#app");
