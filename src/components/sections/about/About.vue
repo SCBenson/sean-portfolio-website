@@ -2,16 +2,6 @@
   <div class="full-page-wrapper">
     <Header/>
 
-    <div>
-      <v-list>
-        <v-list-item>
-          <v-btn>About</v-btn>
-        </v-list-item>
-      </v-list>
-    </div>
-
-
-
     <v-container color="primary" fluid class="pa-0 ma-0 about-container">
       <div id="photo-container" ref="photoContainer" class="avatar-position">
         <v-avatar id="photo" size="300">
