@@ -7,7 +7,6 @@
       <div class="nav-container">
         <v-list>
           <v-list-item>
-            <v-btn id="small-apple-btn" class="small-apple-btn ">Contact</v-btn>
             <v-btn id="small-apple-btn" class="small-apple-btn">Business Languages</v-btn>
           </v-list-item>
         </v-list>

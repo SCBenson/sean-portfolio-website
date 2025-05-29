@@ -17,12 +17,36 @@ useCursor()
   cursor: none !important;
 }
 
+body {
+  transition: background 0.5s ease-in-out;
+}
+
+body, .about-container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 46, 0.3);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-container > * {
+  position: relative;
+  z-index: 2;
+}
 
 .custom-cursor {
-  content: '';
   position: fixed;
-  top: var(--cursor-y, 0);
-  left: var(--cursor-x, 0);
+  top: 0;
+  left: 0;
   width: 20px;
   height: 20px;
   background-color: white;
@@ -31,13 +55,12 @@ useCursor()
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, scale 0.2s ease, opacity 0.2s ease;
   mix-blend-mode: difference;
 }
 
 .custom-cursor.hover {
   transform: translate(-50%, -50%) scale(1.5);
-
   border-width: 2px;
 }
 
