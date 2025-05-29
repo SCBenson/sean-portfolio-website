@@ -10,6 +10,9 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // ADD THIS: Set the base path for GitHub Pages
+  base: '/sean-portfolio-website/', // Replace 'your-repository-name' with your actual GitHub repo name
+  
   plugins: [
     Vue({
       template: { transformAssetUrls },
@@ -57,4 +60,19 @@ export default defineConfig({
       },
     },
   },
+  
+  // ADD THIS: Build configuration for production
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-router'],
+          vuetify: ['vuetify']
+        }
+      }
+    }
+  }
 })
