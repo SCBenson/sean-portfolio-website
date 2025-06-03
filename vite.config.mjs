@@ -11,7 +11,7 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vitejs.dev/config/
 export default defineConfig({
   // ADD THIS: Set the base path for GitHub Pages
-  base: '/sean-portfolio-website/', // Replace 'your-repository-name' with your actual GitHub repo name
+  base: '/', // Replace 'your-repository-name' with your actual GitHub repo name
   
   plugins: [
     Vue({

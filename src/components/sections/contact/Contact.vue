@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-sheet class="contact-wrapper">
     <div class="d-flex justify-center">
       <h1>Let's get in touch!</h1>
     </div>
@@ -37,9 +37,16 @@
       </v-col>
       <v-col md="6"><v-card></v-card></v-col>
     </v-row>
-  </v-container>
+  </v-sheet>
 </template>
 
 <script setup></script>
 
-<style scoped></style>
+<style scoped>
+.contact-wrapper{
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: rgb(var(--v-theme-primary));
+}
+</style>

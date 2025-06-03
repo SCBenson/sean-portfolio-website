@@ -22,6 +22,7 @@
       </p>
 
       <v-btn 
+          to="/contact"
           id="contact-btn"
           variant="outlined"
           color="white"
